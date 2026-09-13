@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecx Portfolio</title>
+
+    <!-- ////BOOTSTRAP ICON LINK///// -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ////CSS LINK///// -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- /////NAVIGATION BAR SECTION/////// -->
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hidesidebar()><a href="#"><i class="bi bi-x-lg"></i></a></li>
+            <li><a href="#"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+            <li><a href="#"><i class="bi bi-file-person-fill"></i> <span>About</span></a></li>
+            <li><a href="#"><i class="bi bi-lightbulb-fill"></i> <span>Skill</span></a></li>
+            <li><a href="#"><i class="bi bi-substack"></i> <span>Blog</span></a></li>
+            <li><a href="#"><i class="bi bi-person-lines-fill"></i> <span>Contact</span></a></li>
+            <li><a href="#"><i class="bi bi-send"></i> <span>Chat</span></a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="images/MECX LOGO.png" width="120rem" alt="logo image"></a></li>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li class="hideOnMobile"><a href="#">Skill</a></li>
+            <li class="hideOnMobile"><a href="#">Blog</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="hideOnMobile"><a href="#">Chat</i></a></li>
+            <li onclick=showsidebar()><a href="#"><i class="bi bi-list"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- /////HERO SEEC -->
+
+    <section class="hero">
+        <div class="hero-card1">
+            <h2 class="main-text1">Hello, I'm</h2>
+            <h2 class="main-text2">Michael <span class="ajinibi">Ajinibi</span></h2>
+            <h2 class="main-text1">FRONTEND DEVELOPER</h2>
+            <p class="small-text">I build fast, responsive and accessible Web Experiences <br>
+                with clean code and a passion for pixel perfection.</p>
+            <button class="btn"><span>VIEW MY WORK</span> <i class="bi bi-arrow-right"></i></button>
+            <button class="btn-outline"> DOWNLOAD RESUME <i class="bi bi-download"></i></button>
+
+            <div class="stats">
+                <div class="stat">
+                    <i class="bi bi-calendar-week"></i>
+                    <strong>4+</strong>
+                    <small>Years Expereince</small>
+                </div>
+                <div class="stat">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <strong>25+</strong>
+                    <small>Project Completed</small>
+                </div>
+                <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <strong>15+</strong>
+                    <small>Happy Client</small>
+                </div>
+            </div>
+            <div class="stat">
+                <i class="bi bi-chat-heart"></i>
+                <strong>100%</strong>
+                <small>Satisfaction</small>
+            </div>
+        </div>
+
+        </div </section>
+
+
+        <script>
+            function showsidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hidesidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+</body>
+
+</html>
