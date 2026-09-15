@@ -6,11 +6,17 @@
 body {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient( rgba(0,0,0,0.6),
-    rgba(0,0,0,0.9)), url(images/bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.9),
+            rgba(12, 45, 73, 0.9)), url(images/bg2.jfif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 /* ////VARIABLE////// */
@@ -33,9 +39,10 @@ body {
 }
 
 nav {
-    
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-
+    padding: 10px 0;
+    backdrop-filter: blur (10px);
+    background: rgba(2, 13, 20, 0.904);
+   
 }
 
 nav ul {
@@ -58,15 +65,38 @@ nav a {
     display: flex;
     align-items: center;
     color: white;
+    position: relative;
 }
 
+nav a::after {
+    left: 0;
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--bg-tertiary);
+    transition: width 0.4s ease;
+
+}
+
+nav a:hover::after {
+    width: 90%;
+}
+
+
 nav a:hover {
-   
+
     color: var(--bg-tertiary);
 }
 
 nav li:first-child {
     margin-right: auto
+}
+
+
+.logo-image {
+    margin: 10px 25px;
 }
 
 .sidebar {
@@ -96,71 +126,82 @@ nav li:first-child {
     width: 100%;
 }
 
-.sidebar a span{
+.sidebar a span {
     margin-left: 10px;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
     background-color: var(--bg-primary2);
     color: white;
 }
 
-/* HERO SECTION */
 
-.hero{
-    margin-top: 100px;
-    margin-left: 100px;
+
+/* ////////////////////HERO SECTION///////////////////////// */
+
+.hero {
+    padding: 5px 11% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
-.main-text1{
+
+.hero-card1 h2 {
     color: white;
     font-size: 2rem;
 }
 
 
-.ajinibi{
+.ajinibi {
     color: var(--bg-primary2);
 }
 
-.main-text2{
+.hero-card1 h1 {
     color: white;
     font-size: 4rem;
 }
 
-.btn{
+.btn {
     padding: 10px 20px;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     background-color: var(--bg-primary2);
     color: white;
     font-weight: 700;
+    text-decoration: none;
 }
 
-.small-text{
+.hero-card1 p {
     color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 35px;
 }
 
 
-.btn:hover{
-   
+.btn:hover {
+
     background-color: #c70b46;
-  
+
 }
 
 
-.btn-outline{
-    margin-left: 0.5rem;
+.btn-outline {
+    margin-left: 0.2rem;
     padding: 10px 15px;
-    border-radius:5px;
-    color: var(--Main-text);
-    background: none;
-    border-color: var(--bg-primary2);
+    border-radius: 5px;
+    color: var(--bg-primary2);
+    background: transparent;
+    display: inline-block;
+    border: 2px solid var(--bg-primary2);
     font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 20px #F40F57;
+
 }
 
-.information{
+.information {
     background-color: var(--paragraph-text);
     width: 80px;
     border-radius: 50px;
@@ -168,43 +209,200 @@ nav li:first-child {
 }
 
 
-.stats{
+.stats {
     display: flex;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-.stat{
+.stat {
     border-right: 1px solid #333;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.stat:last-child{
+.stat:last-child {
     border: none;
 
 }
 
-.stat i{
+.stat i {
     color: var(--bg-primary2);
     font-size: 20px;
     margin-bottom: 4px;
 
 }
 
-.stat strong{
+.stat strong {
     font-size: 15px;
     color: var(--Main-text);
 }
 
-.stat small{
+.stat small {
     color: var(--Main-text);
     font-size: 13px;
 }
 
+.hero-image {
+
+    align-self: flex-end;
+}
+
+.hero-image img{
+    width: 335px;
+    filter: drop-shadow(0 10px 15px rgba(47, 157, 221, 0.5));
+}
+
+/* ///////////ABOUT SECTION///////////// */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(3, 12, 20, 0.9);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-content {
+    margin-right: 40px;
+}
+
+.about-title {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--bg-primary2);
+    font-weight: bolder;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: var(--Main-text);
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.about-content p {
+    color: var(--Main-text);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+
 @media(max-width: 800px) {
     .hideOnMobile {
         display: none;
+    }
+
+
+
+    /* HERP SECTION */
+
+    .hero {
+        
+        min-height: auto;
+        padding: 100px 5% 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 900px;
+
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-card1 h1 {
+        font-size: 50px;
+        line-height: 1.1;
+    }
+
+    .hero-card1 h2 {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    .hero-card1 p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* BUTTON */
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .btn-outline {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    /* STATISTICS */
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* IMAGE */
+    .hero-image {
+        height: auto;
+        overflow: visible;
+        margin-top: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+        margin-left: 20px;
+    }
+
+    /* ABOUT */
+    .about {
+
+        flex-direction: column;
+        gap: 40px;
+        padding: 70px 5%;
+    }
+
+    .about-image{
+         max-width: 100%;
+        width: 100%;
+    }
+    .about-content {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 16px;
     }
 }

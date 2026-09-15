@@ -16,78 +16,110 @@
 <body>
 
     <!-- /////NAVIGATION BAR SECTION/////// -->
-
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hidesidebar()><a href="#"><i class="bi bi-x-lg"></i></a></li>
-            <li><a href="#"><i class="bi bi-house-door"></i><span>Home</span></a></li>
-            <li><a href="#"><i class="bi bi-file-person-fill"></i> <span>About</span></a></li>
-            <li><a href="#"><i class="bi bi-lightbulb-fill"></i> <span>Skill</span></a></li>
-            <li><a href="#"><i class="bi bi-substack"></i> <span>Blog</span></a></li>
-            <li><a href="#"><i class="bi bi-person-lines-fill"></i> <span>Contact</span></a></li>
-            <li><a href="#"><i class="bi bi-send"></i> <span>Chat</span></a></li>
-        </ul>
-        <ul>
-            <li><a href="#"><img src="images/MECX LOGO.png" width="120rem" alt="logo image"></a></li>
-            <li class="hideOnMobile"><a href="#">Home</a></li>
-            <li class="hideOnMobile"><a href="#">About</a></li>
-            <li class="hideOnMobile"><a href="#">Skill</a></li>
-            <li class="hideOnMobile"><a href="#">Blog</a></li>
-            <li class="hideOnMobile"><a href="#">Contact</a></li>
-            <li class="hideOnMobile"><a href="#">Chat</i></a></li>
-            <li onclick=showsidebar()><a href="#"><i class="bi bi-list"></i></a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hidesidebar()><a href="#"><i class="bi bi-x-lg"></i></a></li>
+                <li><a href="#"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+                <li><a href="#"><i class="bi bi-file-person-fill"></i> <span>About</span></a></li>
+                <li><a href="#"><i class="bi bi-person-workspace"></i> <span>Sercvices</span></a></li>
+                <li><a href="#"><i class="bi bi-lightbulb-fill"></i> <span>Skill</span></a></li>
+                <li><a href="#"><i class="bi bi-substack"></i> <span>Blog</span></a></li>
+                <li><a href="#"><i class="bi bi-person-lines-fill"></i> <span>Contact</span></a></li>
+                <li><a href="#"><i class="bi bi-send"></i> <span>Chat</span></a></li>
+            </ul>
+            <ul>
+                <li><img class="logo-image" src="images/MECX LOGO.png" width="150rem" alt="logo image"></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Services</a></li>
+                <li class="hideOnMobile"><a href="#">Skill</a></li>
+                <li class="hideOnMobile"><a href="#">Blog</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li class="hideOnMobile"><a href="#">Chat</i></a></li>
+                <li onclick=showsidebar()><a href="#"><i class="bi bi-list"></i></a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- /////HERO SEEC -->
 
     <section class="hero">
         <div class="hero-card1">
-            <h2 class="main-text1">Hello, I'm</h2>
-            <h2 class="main-text2">Michael <span class="ajinibi">Ajinibi</span></h2>
-            <h2 class="main-text1">FRONTEND DEVELOPER</h2>
-            <p class="small-text">I build fast, responsive and accessible Web Experiences <br>
-                with clean code and a passion for pixel perfection.</p>
-            <button class="btn"><span>VIEW MY WORK</span> <i class="bi bi-arrow-right"></i></button>
-            <button class="btn-outline"> DOWNLOAD RESUME <i class="bi bi-download"></i></button>
+            <h2>Hello, I'm</h2>
+            <h1 class="main-text2">Michael <span class="ajinibi">Ajinibi</span></h2>
+                <h2 class="main-text1">FRONTEND DEVELOPER</h2>
+                <p>I build fast, responsive and accessible Web Experiences <br>
+                    with clean code and a passion for pixel perfection.</p>
+                <a href="#" class="btn">VIEW MY WORK <i class="bi bi-arrow-right"></i></a>
+                <a href="#" class="btn-outline"><span>DOWNLOAD RESUME</span> <i class="bi bi-download"></i></a>
 
-            <div class="stats">
-                <div class="stat">
-                    <i class="bi bi-calendar-week"></i>
-                    <strong>4+</strong>
-                    <small>Years Expereince</small>
+
+                <div class="stats">
+                    <div class="stat">
+                        <strong><i class="bi bi-calendar-week"></i>
+                            4+</strong>
+                        <small>Years Expereince</small>
+                    </div>
+                    <div class="stat">
+                        <strong><i class="bi bi-briefcase-fill"></i>
+                            25+</strong>
+                        <small>Project Completed</small>
+                    </div>
+                    <div class="stat">
+                        <strong><i class="bi bi-people"></i>
+                            15+</strong>
+                        <small>Happy Client</small>
+                    </div>
+                    <div class="stat">
+                        <strong><i class="bi bi-chat-heart-fill"></i>
+                            100%</strong>
+                        <small>Satisfactory</small>
+                    </div>
                 </div>
-                <div class="stat">
-                    <i class="bi bi-briefcase-fill"></i>
-                    <strong>25+</strong>
-                    <small>Project Completed</small>
-                </div>
-                <div class="stat">
-                    <i class="bi bi-people"></i>
-                    <strong>15+</strong>
-                    <small>Happy Client</small>
-                </div>
-            </div>
-            <div class="stat">
-                <i class="bi bi-chat-heart"></i>
-                <strong>100%</strong>
-                <small>Satisfaction</small>
-            </div>
+
         </div>
+        <div class="hero-image">
+            <img src="images/Main Image'.png" width="350px" alt="developer">
+        </div>
+    </section>
 
-        </div </section>
+
+    <!-- //////ABOUT SECTION//////// -->
+
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="images/about image.jpg" width="400px" alt="">
+        </div>
+        <div class="about-content">
+            <span class="about-title">ABOUT ME</span>
+
+            <h2>Passionate Developer. <br>
+                Problem Solver. Tech Enthusiast
+            </h2>
+
+            <p>I'a a full-stack Web Developer with years of experience building robust
+                and scalable web applications. <br>
+                I specialize in Javascript technologies across the stack
+                (MERN) and love turning complex problem into simple, <br>
+                beautiful and intuitive solutions.
+            </p>
+            <a href="#" class="btn">More About Me</a>
+        </div>
+    </section>
 
 
-        <script>
-            function showsidebar() {
-                const sidebar = document.querySelector('.sidebar')
-                sidebar.style.display = 'flex'
-            }
-            function hidesidebar() {
-                const sidebar = document.querySelector('.sidebar')
-                sidebar.style.display = 'none'
-            }
-        </script>
+
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 </body>
 
 </html>
