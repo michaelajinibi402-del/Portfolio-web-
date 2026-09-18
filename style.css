@@ -139,15 +139,32 @@ nav li:first-child {
 
 /* ////////////////////HERO SECTION///////////////////////// */
 
+@keyframes fadein {
+
+    from {
+        opacity: 0;
+        transform: translatey(-500);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(-0);
+    }
+
+}
+
 .hero {
     padding: 5px 11% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+   
 }
 
-
+.hero-card1{
+     animation: fadein 2s ease;
+}
 .hero-card1 h2 {
     color: white;
     font-size: 2rem;
@@ -171,8 +188,8 @@ nav li:first-child {
     color: white;
     font-weight: 700;
     text-decoration: none;
-    transition: .5s;
-    margin-right: 20px;
+
+
 }
 
 .hero-card1 p {
@@ -185,12 +202,12 @@ nav li:first-child {
 .btn:hover {
 
     background-color: #ac093d;
-    transform: translateY(-20px);
+
 }
 
 
 .btn-outline {
-    margin-left: 0.2rem;
+    
     padding: 10px 15px;
     border-radius: 5px;
     color: var(--bg-primary2);
@@ -201,6 +218,11 @@ nav li:first-child {
     text-decoration: none;
     box-shadow: 0 0 20px #F40F57;
 
+}
+
+.click{
+   display: flex;
+   gap: 0.6rem;
 }
 
 .information {
@@ -339,7 +361,7 @@ nav li:first-child {
 
 .services-card:hover {
     border-color: var(--bg-tertiary);
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .services-card h3 {
@@ -403,7 +425,7 @@ nav li:first-child {
 
 .skill-column {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(4, 220px);
     gap: 20px;
     justify-content: center;
 }
@@ -412,10 +434,10 @@ nav li:first-child {
     width: 100%;
     max-width: 500px;
     margin-bottom: 25px;
-   
+
 }
 
-.skill-container{
+.skill-container {
     margin-top: 80px;
 }
 
@@ -450,18 +472,24 @@ nav li:first-child {
     background: var(--Main-text);
     border-radius: 20px;
     overflow: hidden;
+
 }
 
 .progress {
     height: 100%;
     background: linear-gradient(90deg,
-           #e6bd08, #F40F57
-            );
+       #0867a7     );
 }
 
 @media(max-width: 800px) {
     .hideOnMobile {
         display: none;
+    }
+
+    .click{
+        display: flex;
+        flex-direction: column;
+      
     }
 
 
@@ -578,7 +606,7 @@ nav li:first-child {
 
     /* /////////SERVICES////////////// */
 
-    .skill-column{
+    .skill-column {
         display: grid;
         grid-template-columns: repeat(1, 300px);
         margin: 30px;
