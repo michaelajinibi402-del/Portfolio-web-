@@ -29,7 +29,7 @@ header {
     --bg-hover: #580303;
     --bg-secondary: #010708;
     --bg-black1: #071817;
-    --bg-card: #071817;
+    --bg-card: #010214;
     --bg-tertiary: #83adab;
     --bg-tertiary-hover: #7b4504;
 
@@ -42,7 +42,7 @@ nav {
     padding: 10px 0;
     backdrop-filter: blur (10px);
     background: rgba(2, 13, 20, 0.904);
-   
+
 }
 
 nav ul {
@@ -171,6 +171,8 @@ nav li:first-child {
     color: white;
     font-weight: 700;
     text-decoration: none;
+    transition: .5s;
+    margin-right: 20px;
 }
 
 .hero-card1 p {
@@ -182,8 +184,8 @@ nav li:first-child {
 
 .btn:hover {
 
-    background-color: #c70b46;
-
+    background-color: #ac093d;
+    transform: translateY(-20px);
 }
 
 
@@ -249,7 +251,7 @@ nav li:first-child {
     align-self: flex-end;
 }
 
-.hero-image img{
+.hero-image img {
     width: 335px;
     filter: drop-shadow(0 10px 15px rgba(47, 157, 221, 0.5));
 }
@@ -260,7 +262,7 @@ nav li:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(3, 12, 20, 0.9);
+    background-color: rgba(0, 11, 15, 0.9);
 }
 
 .about-image {
@@ -294,7 +296,168 @@ nav li:first-child {
     margin-bottom: 25px;
 }
 
+/* //////SERVICES SECTION/////////// */
 
+.service {
+    background-color: rgba(4, 15, 24, 0.9);
+}
+
+.service-heading p {
+    color: var(--bg-primary2);
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.service-heading h2 {
+    font-size: 38px;
+    color: var(--Main-text);
+    line-height: 1.2;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    gap: 14px;
+    justify-content: center;
+
+}
+
+.services-card {
+    background: linear-gradient(#041227, #010708);
+    border: 2px solid var(--paragraph-text);
+    border-radius: 8px;
+    padding: 25px 18px;
+    transition: .3s;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.services-card:hover {
+    border-color: var(--bg-tertiary);
+    transform: translateY(-5px);
+}
+
+.services-card h3 {
+    color: var(--bg-primary2);
+    margin-bottom: 8px;
+}
+
+.services-card i {
+    color: var(--bg-primary2);
+    font-size: 20px;
+
+}
+
+.services-card p {
+    color: var(--Main-text);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px
+}
+
+.services-card a {
+    text-decoration: none;
+    color: var(--bg-primary2);
+}
+
+.services-card a:hover {
+    color: #c70b46;
+}
+
+.skills {
+    padding: 55px 7px;
+    background-color: rgba(3, 12, 20, 0.9);
+}
+
+.skill-heading p {
+    color: var(--bg-primary2);
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+
+.skill-heading h2 {
+    font-size: 38px;
+    color: var(--Main-text);
+    line-height: 1.7;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skill-heading h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--bg-primary2);
+    margin: 7px auto;
+}
+
+/* ///SKILL GRID///// */
+
+.skill-column {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+   
+}
+
+.skill-container{
+    margin-top: 80px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-name span {
+    color: var(--Main-text);
+}
+
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.percentage {
+    font-size: 15px;
+    color: var(--Main-text);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--Main-text);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg,
+           #e6bd08, #F40F57
+            );
+}
 
 @media(max-width: 800px) {
     .hideOnMobile {
@@ -306,7 +469,7 @@ nav li:first-child {
     /* HERP SECTION */
 
     .hero {
-        
+
         min-height: auto;
         padding: 100px 5% 50px;
         display: flex;
@@ -388,10 +551,11 @@ nav li:first-child {
         padding: 70px 5%;
     }
 
-    .about-image{
-         max-width: 100%;
+    .about-image {
+        max-width: 100%;
         width: 100%;
     }
+
     .about-content {
         max-width: 100%;
         width: 100%;
@@ -405,4 +569,19 @@ nav li:first-child {
     .about-content p {
         font-size: 16px;
     }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        gap: -20px;
+    }
+
+    /* /////////SERVICES////////////// */
+
+    .skill-column{
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        margin: 30px;
+    }
+
 }
