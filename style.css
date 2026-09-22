@@ -11,6 +11,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -25,7 +26,7 @@ header {
 
     /* BACKGROUND */
     --bg-primary: #6F0000;
-    --bg-primary2: #F40F57;
+    --bg-primary2: rgb(196, 9, 9);
     --bg-hover: #580303;
     --bg-secondary: #010708;
     --bg-black1: #071817;
@@ -40,7 +41,9 @@ header {
 
 nav {
     padding: 10px 0;
-    background: rgba(2, 13, 20, 0.904);
+     background: linear-gradient(
+    to right, rgb(49, 1, 1), Black
+   );
 
 }
 
@@ -74,7 +77,7 @@ nav a::after {
     bottom: 1px;
     width: 0;
     height: 1.5px;
-    background-color: var(--bg-tertiary);
+    background-color: var(--bg-primary2);
     transition: width 0.4s ease;
 
 }
@@ -86,7 +89,7 @@ nav a:hover::after {
 
 nav a:hover {
 
-    color: var(--bg-tertiary);
+    color: var(--bg-primary2);
 }
 
 nav li:first-child {
@@ -105,7 +108,7 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background: #071817;
+    background: rgb(8, 0, 0);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -158,6 +161,9 @@ nav li:first-child {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+     background: linear-gradient(
+    to left, rgb(20, 1, 1), Black
+   );
 
 }
 
@@ -168,6 +174,7 @@ nav li:first-child {
 .hero-card1 h2 {
     color: white;
     font-size: 2rem;
+
 }
 
 
@@ -178,6 +185,7 @@ nav li:first-child {
 .hero-card1 h1 {
     color: white;
     font-size: 4rem;
+    font-family: "Archivo Black", sans-serif;
 }
 
 .btn {
@@ -188,8 +196,13 @@ nav li:first-child {
     color: white;
     font-weight: 700;
     text-decoration: none;
+    transition: .5s;
 
 
+}
+
+.btn::after {
+    transform: translate(50px);
 }
 
 .hero-card1 p {
@@ -201,7 +214,7 @@ nav li:first-child {
 
 .btn:hover {
 
-    background-color: #ac093d;
+    background-color: rgb(95, 7, 7);
 
 }
 
@@ -210,13 +223,13 @@ nav li:first-child {
 
     padding: 10px 15px;
     border-radius: 5px;
-    color: var(--bg-primary2);
+    color: var(--Main-text);
     background: transparent;
     display: inline-block;
     border: 2px solid var(--bg-primary2);
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 0 10px #F40F57;
+
 
 }
 
@@ -274,8 +287,8 @@ nav li:first-child {
 }
 
 .hero-image img {
-    width: 335px;
-    filter: drop-shadow(0 10px 15px rgba(47, 157, 221, 0.5));
+    width: 350px;
+
 }
 
 /* ///////////ABOUT SECTION///////////// */
@@ -284,7 +297,9 @@ nav li:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 11, 15, 0.9);
+     background: linear-gradient(
+    to right, rgb(20, 1, 1), Black
+   );
 }
 
 .about-image {
@@ -309,6 +324,7 @@ nav li:first-child {
     color: var(--Main-text);
     line-height: 1.2;
     margin: 0 0 18px;
+
 }
 
 .about-content p {
@@ -321,37 +337,51 @@ nav li:first-child {
 /* //////SERVICES SECTION/////////// */
 
 .service {
-    background-color: rgba(4, 15, 24, 0.9);
+     background: linear-gradient(
+    to left, rgb(20, 1, 1), Black
+   );
 }
 
 .service-heading p {
     color: var(--bg-primary2);
     font-size: 20px;
     font-weight: bolder;
-    padding-top: 20px;
+    padding-top: 70px;
     text-align: center;
 }
 
 .service-heading h2 {
-    font-size: 38px;
+    font-size: 30px;
     color: var(--Main-text);
     line-height: 1.2;
     margin: 0 0 18px;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.service-heading h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--bg-primary2);
+    margin: 7px auto;
 }
 
 .service-container {
     display: grid;
-    grid-template-columns: repeat(4, 240px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     justify-content: center;
+    padding: 30px;
 
 }
 
 .services-card {
-    background: linear-gradient(#041227, #010708);
-    border: 2px solid var(--paragraph-text);
+    background: radial-gradient(rgba(24, 4, 1, 0.9),
+            rgba(0, 6, 12, 0.9));
+    border: 2px solid rgb(49, 50, 51);
     border-radius: 8px;
     padding: 25px 18px;
     transition: .3s;
@@ -391,9 +421,13 @@ nav li:first-child {
     color: #c70b46;
 }
 
+
+/* //////////////SKILL SECTION//////////////// */
+
+
 .skills {
     padding: 55px 7px;
-    background-color: rgba(3, 12, 20, 0.9);
+    background: linear-gradient(to right, rgb(20, 1, 1), Black);
 }
 
 .skill-heading p {
@@ -404,12 +438,13 @@ nav li:first-child {
 }
 
 .skill-heading h2 {
-    font-size: 38px;
+    font-size: 30px;
     color: var(--Main-text);
     line-height: 1.7;
     margin: 0 0 18px;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Archivo Black", sans-serif;
 }
 
 .skill-heading h2::after {
@@ -477,15 +512,14 @@ nav li:first-child {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg,
-            #0867a7);
+    background: linear-gradient(rgba(255, 1, 1, 0.9));
 }
 
 
 /* ///////////PROJECTS SECTION/////////////// */
 
 .projects {
-    background-color: rgba(0, 1, 2, 0.9);
+    background: linear-gradient(to left, rgb(20, 1, 1), Black);
     padding: 30px;
 }
 
@@ -532,8 +566,9 @@ nav li:first-child {
 }
 
 .project-card {
-    background-color: rgba(1, 10, 20, 0.9);
-    border: 1px solid var(--paragraph-text);
+    background: radial-gradient(rgba(48, 7, 1, 0.9),
+            rgba(0, 6, 12, 0.9));
+    border: 1px solid rgb(34, 2, 2);
     padding: 10px;
     border-radius: 10px;
     transition: .3s;
@@ -541,7 +576,9 @@ nav li:first-child {
 
 .project-card:hover {
     transform: translateY(-10px);
+    border-color: rgb(105, 1, 1);
 }
+
 
 .project-card img {
     width: 100%;
@@ -573,13 +610,41 @@ nav li:first-child {
     color: var(--paragraph-text);
     padding: 5px 10px;
     border-radius: 10px;
-    background-color: #222222;
-    border: 1px solid #474747;
+    background-color: #080101;
+    border: 1px solid rgb(128, 4, 4);
 }
 
 .tags span:hover {
-    background-color: #444343;
+    background-color: #5f0303;
 }
+
+/* ///////////CHAT SECTION///////////// */
+
+.chat {
+    background: linear-gradient(to right, rgb(20, 1, 1), Black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    color: var(--Main-text);
+}
+
+.small-text {
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.chat h2 {
+    font-size: 30px;
+    line-height: 1.7;
+}
+
+.chat p {
+    font-size: 13px;
+}
+
+
+
 
 @media(max-width: 800px) {
     .hideOnMobile {
@@ -613,7 +678,7 @@ nav li:first-child {
     }
 
     .hero-card1 h1 {
-        font-size: 50px;
+        font-size: 45px;
         line-height: 1.1;
     }
 
@@ -698,6 +763,14 @@ nav li:first-child {
         font-size: 16px;
     }
 
+    .service{
+        height: 220vh;
+    }
+
+    .service-heading h2{
+        font-size: 25px;
+    }
+
     .service-container {
         display: grid;
         grid-template-columns: repeat(1, 350px);
@@ -738,6 +811,14 @@ nav li:first-child {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+    }
+
+    /* ///////CHAT//////////// */
+
+    .chat{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
 }
