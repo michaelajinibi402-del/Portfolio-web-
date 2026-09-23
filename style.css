@@ -6,11 +6,7 @@
 body {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.973),
-            rgba(12, 45, 73, 0.9)), url(images/bg2.jfif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   
     scroll-behavior: smooth;
 }
 
@@ -41,9 +37,7 @@ header {
 
 nav {
     padding: 10px 0;
-     background: linear-gradient(
-    to right, rgb(49, 1, 1), Black
-   );
+    background: linear-gradient(to right,rgb(10, 0, 0), Black);
 
 }
 
@@ -108,7 +102,7 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background: rgb(8, 0, 0);
+    background: rgb(56, 23, 2);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -118,6 +112,7 @@ nav li:first-child {
     overflow: hidden;
     backdrop-filter: blur (9px);
 }
+
 
 
 .sidebar li {
@@ -161,9 +156,11 @@ nav li:first-child {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-     background: linear-gradient(
-    to left, rgb(20, 1, 1), Black
-   );
+     background: linear-gradient(to left, rgb(10, 0, 0),
+      Black), url(images/bg2.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -206,7 +203,7 @@ nav li:first-child {
 }
 
 .hero-card1 p {
-    color: white;
+    color: #666565;
     margin-top: 10px;
     margin-bottom: 35px;
 }
@@ -297,9 +294,7 @@ nav li:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-     background: linear-gradient(
-    to right, rgb(20, 1, 1), Black
-   );
+    background: linear-gradient(to right, rgb(10, 0, 0), Black);
 }
 
 .about-image {
@@ -328,7 +323,7 @@ nav li:first-child {
 }
 
 .about-content p {
-    color: var(--Main-text);
+    color: #666565;
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 25px;
@@ -337,9 +332,7 @@ nav li:first-child {
 /* //////SERVICES SECTION/////////// */
 
 .service {
-     background: linear-gradient(
-    to left, rgb(20, 1, 1), Black
-   );
+    background: linear-gradient(to left, rgb(10, 0, 0), Black);
 }
 
 .service-heading p {
@@ -379,7 +372,7 @@ nav li:first-child {
 }
 
 .services-card {
-    background: radial-gradient(rgba(24, 4, 1, 0.9),
+    background: linear-gradient(#1b1a1a,
             rgba(0, 6, 12, 0.9));
     border: 2px solid rgb(49, 50, 51);
     border-radius: 8px;
@@ -387,6 +380,7 @@ nav li:first-child {
     transition: .3s;
     margin-top: 20px;
     margin-bottom: 30px;
+
 }
 
 .services-card:hover {
@@ -406,7 +400,7 @@ nav li:first-child {
 }
 
 .services-card p {
-    color: var(--Main-text);
+    color: #666565;
     font-size: 15px;
     line-height: 1.7;
     margin-bottom: 15px
@@ -414,11 +408,11 @@ nav li:first-child {
 
 .services-card a {
     text-decoration: none;
-    color: var(--bg-primary2);
+    color: #af0808;
 }
 
 .services-card a:hover {
-    color: #c70b46;
+    color: #ff0000;
 }
 
 
@@ -427,7 +421,7 @@ nav li:first-child {
 
 .skills {
     padding: 55px 7px;
-    background: linear-gradient(to right, rgb(20, 1, 1), Black);
+    background: linear-gradient(to right, rgb(10, 0, 0), Black);
 }
 
 .skill-heading p {
@@ -519,7 +513,7 @@ nav li:first-child {
 /* ///////////PROJECTS SECTION/////////////// */
 
 .projects {
-    background: linear-gradient(to left, rgb(20, 1, 1), Black);
+    background: linear-gradient(to left,rgb(10, 0, 0), Black);
     padding: 30px;
 }
 
@@ -566,12 +560,13 @@ nav li:first-child {
 }
 
 .project-card {
-    background: radial-gradient(rgba(48, 7, 1, 0.9),
+    background: linear-gradient(#1b1a1a,
             rgba(0, 6, 12, 0.9));
     border: 1px solid rgb(34, 2, 2);
     padding: 10px;
     border-radius: 10px;
     transition: .3s;
+    margin-bottom: 30px;
 }
 
 .project-card:hover {
@@ -593,7 +588,7 @@ nav li:first-child {
 }
 
 .project-card p {
-    color: var(--paragraph-text);
+    color: #666565;
     font-size: 12px;
     line-height: 1.7;
     margin: 7px 0 12px;
@@ -621,7 +616,7 @@ nav li:first-child {
 /* ///////////CHAT SECTION///////////// */
 
 .chat {
-    background: linear-gradient(to right, rgb(20, 1, 1), Black);
+    background: linear-gradient(to right,rgb(46, 28, 2), Black);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -641,8 +636,43 @@ nav li:first-child {
 
 .chat p {
     font-size: 13px;
+    color: #555555;
 }
 
+/* ////////FOOTER SECTION/////////// */
+
+.contact{
+    background-color: #010708;
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+    padding: 30px;
+    align-items: center;
+}
+
+.contact p{
+    font-size: 12px;
+
+}
+
+.footer-icon{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icon a{
+    text-decoration: none;
+    color: #555555;
+}
+
+.footer-icon a:hover{
+    color: #b4b3b3;
+}
+
+.terms{
+    display: flex;
+    gap: 13px;
+}
 
 
 
@@ -659,7 +689,7 @@ nav li:first-child {
 
 
 
-    /* HERP SECTION */
+    /* HERO SECTION */
 
     .hero {
 
@@ -683,7 +713,7 @@ nav li:first-child {
     }
 
     .hero-card1 h2 {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 1.8;
     }
 
@@ -698,7 +728,7 @@ nav li:first-child {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 12px;
+        
     }
 
     .btn-outline {
@@ -707,6 +737,7 @@ nav li:first-child {
         flex-wrap: wrap;
         margin-top: 12px;
         gap: 12px;
+        padding: 10px 100px;
     }
 
     /* STATISTICS */
@@ -745,7 +776,6 @@ nav li:first-child {
     }
 
     .about-image {
-        max-width: 100%;
         width: 100%;
     }
 
@@ -763,11 +793,11 @@ nav li:first-child {
         font-size: 16px;
     }
 
-    .service{
+    .service {
         height: 220vh;
     }
 
-    .service-heading h2{
+    .service-heading h2 {
         font-size: 25px;
     }
 
@@ -784,6 +814,7 @@ nav li:first-child {
         display: grid;
         grid-template-columns: repeat(1, 300px);
         margin: 30px;
+        margin-bottom: 30px;
     }
 
 
@@ -813,12 +844,21 @@ nav li:first-child {
         gap: 20px;
     }
 
-    /* ///////CHAT//////////// */
+
+    /* ///////CHAT SECTION//////////// */
 
     .chat{
         display: flex;
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 
+    /* ///////FOOTER SECTION//////////// */
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
